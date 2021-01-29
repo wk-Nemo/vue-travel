@@ -4,7 +4,7 @@
     <ul>
       <li
        class="item border-bottom"
-       v-for="item of recommendList"
+       v-for="item of list"
        :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -22,25 +22,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vcimg/f03f5ac90ae59d0d9c6332a2bfd9782e.jpeg',
-        title: '大连圣亚海洋世界',
-        desc: '浪漫大连首站，浪漫的海洋主题公园'
-      }, {
-        id: '0001',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vcimg/f03f5ac90ae59d0d9c6332a2bfd9782e.jpeg',
-        title: '大连圣亚海洋世界',
-        desc: '浪漫大连首站，浪漫的海洋主题公园'
-      }, {
-        id: '0001',
-        imgUrl: '//imgs.qunarzz.com/vs_ceph_vcimg/f03f5ac90ae59d0d9c6332a2bfd9782e.jpeg',
-        title: '大连圣亚海洋世界',
-        desc: '浪漫大连首站，浪漫的海洋主题公园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -48,18 +31,13 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
   .title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-index:.2rem
-  // .item
-  //   display: flex
-  //   height: 1.9rem
-  //   overflow: hidden
   .item-img-wrapper
     height: 0
     overflow: hidden
-    padding-bottom: 30.9%
+    padding-bottom: 37.09%
     .item-img
       width: 100%
   .item-info
